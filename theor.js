@@ -135,7 +135,9 @@ function Theor(){
 					var has_hidden = node.hasClass("hidden");
 					var is_visible = parent.is(":visible");
 
-					if (parent[0].nodeName == "li"){
+					// console.log(parent[0].nodeName);
+
+					if (!parent.hasClass("nav-header")){
 						if (has_hidden && is_visible){
 							parent.hide();
 						}else if (!has_hidden && !is_visible){
