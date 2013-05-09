@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
 	"name": "Theor",
-	"description": "Extend theoldreader.com keyboard shortcuts",
-	"version": "0.2",
+	"description": "Enhance theoldreader.com keyboard shortcuts (and more)",
+	"version": "0.3",
 	"permissions": [
 		"tabs"
 	],
@@ -12,5 +12,10 @@
 			"js" : ["theor.js"],
 			"run_at" : "document_end"
 		}
-	]
+	],
+	"icons": {
+		"16": "16.png",
+		"48": "48.png",
+		"128": "128.png"
+	}
 }

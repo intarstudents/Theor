@@ -92,10 +92,6 @@ function Theor(){
 				this.current_item_object.find("a").trigger("click");
 		},
 
-		read_all: function(){
-			$("#main .read").trigger("click");
-		},
-
 		init: function(){
 
 			// Append Theor style
@@ -105,6 +101,12 @@ function Theor(){
 				</style>")
 			);
 
+			// Unbind default keyboard handles
+			Mousetrap.unbind("o", "keydown");
+			Mousetrap.unbind("shift+n", "keydown");
+			Mousetrap.unbind("shift+p", "keydown");
+			Mousetrap.unbind("shift+o", "keydown");
+
 			Mousetrap.bind("shift+n", function(){
 				return Theor.select_feed("down");
 			}, "keydown");
@@ -113,13 +115,8 @@ function Theor(){
 				return Theor.select_feed("up");
 			}, "keydown");
 
-			Mousetrap.unbind("o", "keydown");
 			Mousetrap.bind("shift+o", function(){
 				return Theor.open_selected();
-			}, "keydown");
-
-			Mousetrap.bind("shift+a", function(){
-				return Theor.read_all();
 			}, "keydown");
 
 			this.sidebar = $("#sidebar");
@@ -134,8 +131,6 @@ function Theor(){
 					var parent = node.parent().parent();
 					var has_hidden = node.hasClass("hidden");
 					var is_visible = parent.is(":visible");
-
-					// console.log(parent[0].nodeName);
 
 					if (!parent.hasClass("nav-header")){
 						if (has_hidden && is_visible){
