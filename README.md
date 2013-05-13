@@ -1,5 +1,4 @@
-Extra keyboard shortcuts for The Old Reader
+Enhance theoldreader.com keyboard shortcuts (and more)
 
-`<Shift> + n/p` next/previous subscription
-`<Shift> + o` open subscription
-`<Shift> + a` mark all as read
+* Somewhat faster feed list navigation with `Shift + P` and `Shift + N`, then theoldreader.com default (using App.feeds keys, not slow DOM)
+* Hides navigation bar by default (toggle with `Shift + F`)
