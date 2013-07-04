@@ -133,9 +133,9 @@ function Theor(){
 		// In backrgound refresh App.feeds id list 
 		// for faster navigation through feed list
 		background_tasks: function(){
-			if (Theor.last_app_timeout != App.timeout){
-				Theor.last_app_timeout = App.timeout;
-				Theor.feed_ids = Object.keys(App.feeds);
+			if (Theor.last_app_timeout != Reader.Sidebar.timeout){
+				Theor.last_app_timeout = Reader.Sidebar.timeout;
+				Theor.feed_ids = Object.keys(Reader.Sidebar.feeds);
 			}
 		}
 	}
